@@ -1,7 +1,6 @@
 import random
 import string
 
-
 def RandomName(hangman_games):
     
     return random.choice(hangman_games)
@@ -30,12 +29,11 @@ def Death():
         print('You are a loser!')
         quit()
         
-def ListInit(hangman_name):
+def DictInit(hangman_name):
     correct_index = {}     
     count = 0
 
     while count < len(hangman_name):
-        
         correct_index[count] = '-'
         count += 1
     print(correct_index)
@@ -47,7 +45,7 @@ hangman_name = ['rainbow', 'computer', 'science', 'programming',
          'reverse', 'water', 'board', 'geeks']
 random_name = RandomName(hangman_name)
 lives = 6
-correct_index = ListInit(random_name)
+correct_index = DictInit(random_name)
     
 print('Welcome to Arman\'s hangman game!\n----------------')
 #game loop
