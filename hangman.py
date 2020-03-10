@@ -54,8 +54,8 @@ print('Welcome to Arman\'s hangman game!\n----------------')
 while True:
     
     user_input = input('Please enter a letter: ')
-    while not(user_input.isalpha()):
-        user_input = input('We dont accept numbers. Please enter a letter: ')
+    while not(user_input.isalpha() and len(user_input) == 1):
+        user_input = input('Please enter a valid letter: ')
 
     output_list = HangmanChecker(random_name, user_input, correct_index)
     if any(output_list[x] == '-' for x in output_list):
